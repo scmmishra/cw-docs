@@ -1,9 +1,9 @@
 ---
-sidebar_label: "Setup Guide"
-title: "Project Setup"
+title: Project Setup
+sidebar_label: Setup Guide
 ---
 
-This guide will help you to setup and run Chatwoot in development mode. Please make sure you have completed the environment setup.
+This guide will help you to setup and run Chatwoot in development mode. Please make sure you have completed the environment setup. You can follow this for both MacOS and Linux.
 
 ### Clone the repo
 
@@ -16,7 +16,7 @@ git clone https://github.com/chatwoot/chatwoot.git
 cd chatwoot
 ```
 
-### Install Ruby & Javascript dependencies
+### Install Ruby &amp; Javascript dependencies
 
 Use the following command to run `bundle && yarn` to install ruby and Javascript dependencies.
 
@@ -24,10 +24,9 @@ Use the following command to run `bundle && yarn` to install ruby and Javascript
 make burn
 ```
 
-
 This would install all required dependencies for Chatwoot application.
 
-If you face issue with pg gem, please refer to [Common Errors](/docs/contributing-guide/common-errors#pg-gem-installation-error)
+If you face issue with pg gem, please refer to [Common Errors](/docs/contributing-guide/common-errors#pg-gem-installation-error "/docs/contributing-guide/common-errors#pg-gem-installation-error")
 
 ### Setup environment variables.
 
@@ -35,7 +34,7 @@ If you face issue with pg gem, please refer to [Common Errors](/docs/contributin
 cp .env.example .env
 ```
 
-Please refer to [environment-variables](/docs/contributing-guide/environment-variables) to read on setting environment variables.
+Please refer to [environment-variables](/docs/contributing-guide/environment-variables "/docs/contributing-guide/environment-variables") to read on setting environment variables.
 
 ### Setup rails server
 
@@ -45,6 +44,7 @@ make db
 # fireup the server
 foreman start -f Procfile.dev
 ```
+
 Note: If you have overmind installed, use `make run` to run the server.
 
 ### Login with credentials
@@ -55,7 +55,7 @@ user name: john@acme.inc
 password: Password1!
 ```
 
-### Testing chat widget in your local environment 
+### Testing chat widget in your local environment
 
 When running Chatwoot in development environment, the chat widget can be accessed under the following URL.
 
@@ -87,6 +87,7 @@ docker compose exec rails bundle exec rails db:chatwoot_prepare
 
 # docker compose up
 ```
+
 Then browse http://localhost:3000
 
 ```bash
@@ -103,12 +104,15 @@ docker compose stop
 docker compose build
 ```
 
-
 The docker-compose environment consists of:
-- chatwoot server
-- postgres
-- redis
-- webpacker-dev-server
+
+* chatwoot server
+
+* postgres
+
+* redis
+
+* webpacker-dev-server
 
 If in case you encounter a seeding issue or you want reset the database you can do it using the following command :
 
@@ -120,9 +124,7 @@ This command essentially runs postgres and redis containers and then run the rak
 
 ### Running Cypress Tests
 
-Refer the docs to learn how to write cypress specs
-https://github.com/shakacode/cypress-on-rails
-https://docs.cypress.io/guides/overview/why-cypress.html
+Refer the docs to learn how to write cypress specshttps://github.com/shakacode/cypress-on-railshttps://docs.cypress.io/guides/overview/why-cypress.html
 
 ```
 # in terminal tab1
@@ -131,10 +133,9 @@ overmind start -f Procfile.test
 yarn cypress open --project ./test
 ```
 
-
 ### Debugging Docker for production
 
-You can use our official Docker image from [https://hub.docker.com/r/chatwoot/chatwoot](https://hub.docker.com/r/chatwoot/chatwoot)
+You can use our official Docker image from [https://hub.docker.com/r/chatwoot/chatwoot](https://hub.docker.com/r/chatwoot/chatwoot "https://hub.docker.com/r/chatwoot/chatwoot")
 
 ```bash
 docker pull chatwoot/chatwoot
